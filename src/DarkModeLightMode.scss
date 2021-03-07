@@ -1,0 +1,803 @@
+/* SCSS HEX */
+$radical-red: #e85462ff;
+$fiery-rose: #ff5c6cff;
+$baby-powder: #fffcf9ff;
+
+// Our Color Palette
+$base: #6ca7b2;
+$base-highlighted: #cbe4e3;
+$base-dark-highlighted: #79a5b0;
+$white: #ffffff;
+$gray-0: #f8fafa;
+$gray-1: #eaeeef;
+$gray-2: #dbe2e3;
+$gray-3: #a5b6b9;
+$gray-7: #778d91;
+$gray-8: #5e6f72;
+$gray-9: #374143;
+$gray-10: #111214;
+$gray-test: #1d1d23;
+$button-shadow: #15151a;
+$gray-dark-0: #374143;
+// $gray-dark-1: #0f191a;
+$gray-dark-1: #222529;
+
+$dark: #374143;
+
+$button-dark: #1d1d23;
+
+.MuiAlert-message {
+  padding: 10px 0 !important;
+}
+.MuiAlert-root {
+  padding: 4px 16px !important;
+}
+
+.MuiButton-root {
+  border-radius: 8px !important;
+}
+
+.MuiToggleButtonGroup-root {
+  border-radius: 10px !important;
+  border: none !important;
+
+  button {
+    border-radius: 10px !important;
+    border: none !important;
+    margin-left: 0px !important;
+  }
+}
+
+//**********************************************
+//          _    ___ ___ _  _ _____            *
+//          | |  |_ _/ __| || |_   _|          *
+//          | |__ | | (_ | __ | | |            *
+//          |____|___\___|_||_| |_|            *
+//**********************************************
+.Light-Mode {
+  background-color: $gray-1; // rgba(89, 165, 177, 0.6);
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  a {
+    color: $dark;
+  }
+
+  .MuiListItemIcon-root {
+    color: $dark;
+  }
+
+  // code blocks
+  code {
+    background-color: rgba(255, 255, 255, 1) !important;
+    color: #ee87a9 !important;
+    padding: 2px !important;
+    border-radius: 2px !important;
+  }
+  .MuiInputBase-root {
+    color: $dark;
+  }
+  //   paper and cards
+  .MuiPaper-root,
+  .MuiCard-root {
+    // min-width: 275px;
+    background-color: $gray-0;
+    color: $gray-9 !important;
+    box-shadow: 2px 3.5px 10.5px 0 rgba(0, 0, 0, 0.07);
+  }
+  .MuiPaper-root p,
+  .MuiCard-root p,
+  .MuiPaper-root h1,
+  .MuiCard-root h1,
+  .MuiPaper-root h2,
+  .MuiCard-root h2,
+  .MuiPaper-root h3,
+  .MuiCard-root h3,
+  .MuiPaper-root h4,
+  .MuiCard-root h4,
+  .MuiPaper-root h5,
+  .MuiCard-root h5,
+  .MuiPaper-root code,
+  .MuiCard-root code,
+  .MuiPaper-root input,
+  .MuiCard-root input,
+  .MuiFormControlLabel-label,
+  label {
+    color: $gray-9;
+  }
+  //   material buttons
+  .MuiButton-root {
+    color: $gray-9;
+  }
+  .MuiButton-textSecondary {
+    color: $base;
+  }
+  .MuiButton-outlinedSecondary {
+    color: $base;
+    background-color: $white;
+    border: none;
+  }
+  .MuiButton-outlinedSecondary:hover {
+    border: none;
+    background-color: $base-highlighted;
+  }
+
+  .MuiButton-textPrimary {
+    color: $gray-0;
+  }
+  .MuiButton-outlinedPrimary {
+    color: $gray-0;
+    background-color: $base;
+    border: 1px solid $gray-3;
+  }
+  .MuiButton-outlinedPrimary:hover {
+    border: 1px solid $gray-0;
+    background-color: $base;
+  }
+  .MuiToggleButtonGroup-root {
+    background-color: $white !important;
+    button {
+      background-color: $white !important;
+    }
+  }
+  .MuiToggleButton-root {
+    color: $gray-3;
+    background-color: $gray-0;
+  }
+  .MuiToggleButton-root:hover {
+    color: $base;
+  }
+  .MuiToggleButton-root.Mui-selected {
+    color: $gray-0 !important;
+    background-color: $base !important;
+  }
+  .MuiToggleButton-root.Mui-selected:hover {
+    background-color: lighten($base, 10%);
+  }
+  //   TextFields
+  .MuiTextField-root,
+  .MuiInputBase-root {
+    fieldset {
+      border-color: $gray-3 !important;
+      color: $gray-1 !important;
+    }
+    input {
+      border-color: $gray-9 !important;
+      color: $gray-8 !important;
+    }
+    label {
+      border-color: $gray-9 !important;
+      color: $gray-8 !important;
+    }
+  }
+  .MuiFormLabel-root.Mui-focused {
+    color: $base !important;
+  }
+  .MuiFormLabel-colorSecondary.Mui-focused {
+    color: $base !important;
+  }
+  .MuiInput-colorSecondary.MuiInput-underline:after {
+    border-bottom-color: $base !important;
+  }
+  .MuiInput-underline:before {
+    border-bottom: 1px solid $base;
+  }
+
+  //   Our custom PaperInput.tsx
+  .Paper-Input {
+    padding: 2px 4px !important;
+    display: flex !important;
+    align-items: center !important;
+    color: $gray-9 !important;
+    input {
+      color: $gray-9 !important;
+    }
+  }
+
+  // Tabbed Views
+  .MuiTab-textColorPrimary.Mui-selected {
+    color: #333 !important;
+  }
+  span[class^="PrivateTabIndicator-colorPrimary"],
+  span[class*="PrivateTabIndicator-colorPrimary"],
+  span[class^="PrivateTabIndicator-colorSecondary"],
+  span[class*="PrivateTabIndicator-colorSecondary"],
+  .MuiTabs-indicator {
+    background-color: $base !important;
+  }
+
+  // Navbar styles
+  .nav-bar a li svg:active,
+  .nav-bar a li.active svg {
+    box-shadow: 0 0.1em 0.2em rgba(0, 0, 0, 0.1) inset,
+      0 0.1em 0.1em rgba(0, 0, 0, 0.2) inset,
+      0.05em 0 0.07em rgba(0, 0, 0, 0.2) inset,
+      -0.05em 0 0.07em rgba(0, 0, 0, 0.2) inset;
+
+    border-radius: 7px;
+    transition: 110ms;
+  }
+  // tables
+  table td,
+  table tr,
+  table th {
+    color: #000;
+  }
+  .MuiTableCell-stickyHeader {
+    background-color: $gray-0;
+  }
+  .Logs .MuiTableCell-root {
+    border-bottom: none;
+  }
+  .variables-table {
+    tr {
+      background-color: #fff;
+    }
+  }
+  // divider between table rows
+  .EndpointRunner .MuiTableCell-root {
+    border-bottom: none;
+  }
+
+  .MuiSelect-select:focus {
+    background-color: rgba(0, 0, 0, 0) !important;
+  }
+  // notched Select input
+  .MuiOutlinedInput-notchedOutline {
+    border-color: rgba(0, 0, 0, 0.23);
+  }
+  .MuiFormLabel-root {
+    color: rgba(0, 0, 0, 0.54);
+  }
+  .MuiSelect-icon {
+    color: rgba(0, 0, 0, 0.54);
+  }
+
+  .MuiAlert-message {
+    color: #333 !important;
+  }
+  .MuiAlert-action {
+    color: $base !important;
+  }
+  .MuiCircularProgress-colorPrimary {
+    color: $base;
+  }
+  .MuiCircularProgress-colorSecondary {
+    color: $base;
+  }
+
+  // switchers
+  .MuiSwitch-colorSecondary.Mui-checked {
+    color: $base;
+  }
+  .MuiSwitch-colorSecondary.Mui-checked + .MuiSwitch-track {
+    background-color: $base;
+  }
+
+  .EndpointCard:hover {
+    top: -8px !important;
+    box-shadow: 0 15px 60px 0 rgba(0, 0, 0, 0.2) !important;
+  }
+
+  .stdout-table-row {
+    background-color: $gray-2;
+  }
+
+  .MuiSkeleton-root {
+    background-color: $gray-2;
+  }
+
+  .file:hover {
+    background-color: $gray-2;
+  }
+  .active {
+    transform: translate(10px);
+    transition: 175ms;
+    background-color: $base;
+    color: $gray-9;
+  }
+  .active:hover {
+    background-color: lighten($base, 10%);
+  }
+  .MuiAppBar-colorPrimary,
+  .MuiAppBar-root {
+    background-color: $gray-1;
+  }
+
+  //Stepper
+  .MuiStepIcon-active {
+    color: $base !important;
+  }
+  .MuiStepIcon-completed {
+    color: $base !important;
+  }
+  .MuiStepLabel-label.MuiStepLabel-completed {
+    color: $gray-3;
+  }
+  .MuiStepLabel-label.MuiStepLabel-active {
+    color: $base;
+  }
+
+  /********************************/
+  // ScrollBars
+  /* width */
+  ::-webkit-scrollbar {
+    width: 18px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background-color: $gray-0;
+    // box-shadow: inset 0 0 5px $gray-0;
+    border-radius: 10px;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: $base-highlighted;
+    border-radius: 10px;
+  }
+
+  // /* Handle on hover */
+  // ::-webkit-scrollbar-thumb:hover {
+  //   // box-shadow: inset 0 0 5px $gray-0;
+  // }
+
+  .drawerInput {
+    background-color: $white;
+  }
+}
+
+//**********************************************
+//          ___   _   ___ _  __                *
+//          |   \ /_\ | _ \ |/ /               *
+//          | |) / _ \|   / ' <                *
+//          |___/_/ \_\_|_\_|\_\               *
+//**********************************************
+.Dark-Mode {
+  background-color: #222529; //$gray-dark-1;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  a {
+    color: $gray-0;
+  }
+  // code blocks
+  code {
+    background-color: rgba(0, 0, 0, 1) !important;
+  }
+
+  .MuiListItemIcon-root {
+    color: $gray-0;
+  }
+
+  .MuiInputBase-root {
+    color: $gray-0;
+  }
+  .MuiInputBase-root:hover {
+    color: $base;
+  }
+
+  .MuiInput-underline:before {
+    border-bottom: 1px solid $gray-2;
+  }
+
+  // icons
+  .MuiIconButton-root {
+    color: $base;
+  }
+  //   paper and cards
+  .MuiPaper-root,
+  .MuiCard-root {
+    background-color: $gray-10;
+    color: $gray-0;
+    box-shadow: 2px 3.5px 10.5px 0 rgba(0, 0, 0, 0.07);
+  }
+  .MuiPaper-root p,
+  .MuiCard-root p,
+  .MuiPaper-root h1,
+  .MuiCard-root h1,
+  .MuiPaper-root h2,
+  .MuiCard-root h2,
+  .MuiPaper-root h3,
+  .MuiCard-root h3,
+  .MuiPaper-root h4,
+  .MuiCard-root h4,
+  .MuiPaper-root h5,
+  .MuiCard-root h5,
+  .MuiPaper-root code,
+  .MuiCard-root code,
+  .MuiPaper-root input,
+  .MuiCard-root input,
+  .MuiFormControlLabel-label {
+    color: $gray-0;
+  }
+  //   material buttons
+  .MuiButton-root {
+    color: $gray-0;
+    border: none !important; // 1px solid $gray-3;
+    background-color: $button-dark;
+
+    svg {
+      color: $base;
+    }
+  }
+  .MuiButton-root.btn-no-outline {
+    border: none !important;
+    background-color: $gray-10;
+  }
+  .MuiButton-textPrimary {
+    color: $base !important;
+  }
+  .MuiButton-outlinedPrimary {
+    color: $base !important;
+    border: none; // 1px solid transparentize($base, 0.5) !important;
+  }
+  .MuiButton-outlinedPrimary:hover {
+    border: none; // 1px solid $base !important;
+    background-color: transparentize($base, 0.6) !important;
+  }
+
+  .MuiButton-outlinedSecondary:hover {
+    border: none; //1px solid $gray-3;
+    background-color: lighten($button-shadow, 10%);
+  }
+
+  .MuiToggleButtonGroup-root {
+    background-color: $gray-dark-1 !important;
+    button {
+      background-color: $gray-dark-1 !important;
+    }
+  }
+  .MuiToggleButton-root {
+    color: $gray-3;
+    background-color: $gray-10;
+  }
+  .MuiToggleButton-root:hover {
+    color: $base;
+  }
+  .MuiToggleButton-root.Mui-selected {
+    color: $gray-2 !important;
+    background-color: $base !important;
+  }
+  .MuiToggleButton-root.Mui-selected:hover {
+    background-color: lighten($base, 5%);
+  }
+
+  //   TextFields
+  .MuiTextField-root,
+  .MuiInputBase-root {
+    fieldset {
+      border-color: $gray-3;
+      color: $gray-1;
+    }
+    input {
+      border-color: $gray-3;
+      color: $gray-1;
+    }
+    label {
+      border-color: $gray-3;
+      color: $gray-1;
+    }
+  }
+  .MuiInputBase-input {
+    color: $gray-0;
+  }
+  .MuiInputBase-input:hover {
+    color: $base;
+  }
+  .MuiInputBase-input:active {
+    color: $base;
+  }
+  .MuiFormLabel-colorSecondary.Mui-focused {
+    color: $base !important;
+  }
+  .MuiInput-colorSecondary.MuiInput-underline:after {
+    border-bottom-color: $base !important;
+  }
+  .MuiInput-colorSecondary.MuiInput-underline:after {
+    border-bottom: 1px solid $base;
+    border-bottom-color: $base !important;
+  }
+
+  //   Our custom PaperInput.tsx
+  .Paper-Input {
+    padding: 2px 4px !important;
+    display: flex !important;
+    align-items: center !important;
+    background-color: $gray-10 !important;
+    input {
+      color: $gray-0 !important;
+    }
+  }
+
+  // Tabbed Views
+  .MuiTab-textColorPrimary {
+    color: rgba(224, 224, 224, 0.49);
+  }
+  .MuiTab-textColorPrimary.Mui-selected {
+    color: $base !important;
+  }
+  span[class^="PrivateTabIndicator-colorPrimary"],
+  span[class*="PrivateTabIndicator-colorPrimary"],
+  span[class^="PrivateTabIndicator-colorSecondary"],
+  span[class*="PrivateTabIndicator-colorSecondary"],
+  .MuiTabs-indicator {
+    background-color: $base !important;
+  }
+
+  // MUI Divider
+  .MuiDivider-root {
+    background-color: $gray-7;
+  }
+
+  // tables
+  table td,
+  table tr,
+  table th {
+    color: $gray-0;
+  }
+  .MuiTableCell-stickyHeader {
+    background-color: $gray-10;
+  }
+  .Logs .MuiTableCell-root {
+    border-bottom: none;
+  }
+
+  .variables-table {
+    tr {
+      background-color: $gray-test;
+    }
+  }
+
+  // divider between table rows
+  .EndpointRunner .MuiTableCell-root {
+    border-bottom: none;
+  }
+
+  .MuiSelect-select:focus {
+    background-color: rgba(0, 0, 0, 0) !important;
+  }
+
+  // notched Select input
+  .MuiOutlinedInput-notchedOutline {
+    border-color: $base;
+  }
+  .MuiFormLabel-root {
+    color: $base;
+  }
+  .MuiSelect-icon {
+    color: $base;
+  }
+
+  // switchers
+  .MuiSwitch-colorSecondary.Mui-checked {
+    color: $base;
+  }
+  .MuiSwitch-colorSecondary.Mui-checked + .MuiSwitch-track {
+    background-color: $base;
+  }
+  .MuiFormLabel-root.Mui-focused {
+    color: $base;
+  }
+  .MuiCheckbox-colorSecondary.Mui-checked {
+    color: $base;
+  }
+
+  .EndpointCard:hover {
+    top: -8px !important;
+    box-shadow: 0 15px 60px 0 transparentize($color: $gray-3, $amount: 0.8) !important;
+  }
+
+  .MuiListItem-root.Mui-selected,
+  .MuiListItem-root.Mui-selected:hover {
+    background-color: $gray-8;
+  }
+  .MuiListItem-root:hover {
+    background-color: $gray-8;
+  }
+
+  .stdout-table-row {
+    background-color: $gray-8;
+  }
+
+  .file:hover {
+    background-color: $gray-8;
+  }
+  .active {
+    transform: translate(10px);
+    transition: 175ms;
+    background-color: $base;
+    color: $gray-9;
+  }
+  .active:hover {
+    background-color: lighten($base, 5%);
+  }
+  .MuiAppBar-colorPrimary,
+  .MuiAppBar-root {
+    background-color: $gray-dark-1;
+  }
+  .json-to-table tr:nth-child(even) {
+    background-color: $gray-8;
+  }
+  .live-button {
+    color: $gray-3;
+  }
+  //Stepper
+  .MuiStepIcon-active {
+    color: $base !important;
+  }
+  .MuiStepIcon-completed {
+    color: $base !important;
+  }
+  .MuiStepLabel-label.MuiStepLabel-completed {
+    color: $gray-8;
+  }
+  .MuiStepLabel-label.MuiStepLabel-active {
+    color: $base;
+  }
+  /********************************/
+  // ScrollBars
+  /* width */
+  ::-webkit-scrollbar {
+    width: 18px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background-color: $gray-10;
+    // box-shadow: inset 0 0 5px $gray-0;
+    border-radius: 10px;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: $gray-dark-0;
+    // background: $base-dark-highlighted;
+    border-radius: 10px;
+  }
+
+  .drawerInput {
+    background-color: $gray-test;
+  }
+} // end dark mode
+
+.MuiToggleButton-root {
+  border: 1px solid $base !important;
+}
+
+.file {
+  text-decoration: none;
+  list-style: none;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 7px;
+  border-radius: 7px;
+}
+
+.MuiChip-colorSecondary {
+  display: flex !important;
+  margin: 5px 0 5px 0 !important;
+  padding: 5px 5px 0 5px !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+}
+
+.MuiChip-colorSecondary.picker {
+  margin-left: 8% !important;
+}
+
+.MuiChip-colorSecondary.installed {
+  color: $gray-0;
+  background-color: $base;
+}
+.MuiChip-colorSecondary.installed:hover {
+  background-color: transparentize($color: $base, $amount: 0.2);
+}
+.MuiChip-colorSecondary.installed:focus {
+  background-color: transparentize($color: $base, $amount: 0.2);
+}
+
+.MuiChip-colorSecondary.error {
+  color: $gray-0;
+  background-color: rgba(230, 172, 179, 0.9);
+}
+.MuiChip-colorSecondary.error:hover {
+  background-color: rgba(230, 172, 179, 0.7);
+}
+.MuiChip-colorSecondary.error:focus {
+  background-color: rgba(230, 172, 179, 0.7);
+}
+
+.MuiChip-colorSecondary.pending {
+  color: $gray-0;
+  background-color: #a5b6b9;
+}
+.MuiChip-colorSecondary.pending:hover {
+  background-color: transparentize($color: #a5b6b9, $amount: 0.2);
+}
+.MuiChip-colorSecondary.pending:focus {
+  background-color: transparentize($color: #a5b6b9, $amount: 0.2);
+}
+
+.EndpointCard {
+  margin: 8px;
+}
+
+.fileContainer::-webkit-scrollbar {
+  display: none;
+}
+.fileContainer {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.drawerInput {
+  border: none;
+  border-radius: 10px;
+  padding: 0px 10px 0px 10px;
+}
+
+.runnerInput {
+  border: 0.5px solid $base-dark-highlighted;
+  border-radius: 10px;
+  padding: 0px 10px 0px 10px;
+}
+::-webkit-scrollbar-corner {
+  display: none;
+}
+
+.MuiTableCell-root {
+  padding: 7px !important;
+}
+
+.variables-table {
+  tr {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+
+  table {
+    thead {
+      tr {
+        border: none !important;
+      }
+    }
+  }
+  td:first-child {
+    border-top-left-radius: 10px;
+  }
+  td:last-child {
+    border-top-right-radius: 10px;
+  }
+  td:first-child {
+    border-bottom-left-radius: 10px;
+  }
+  td:last-child {
+    border-bottom-right-radius: 10px;
+  }
+}
+
+.variables-table-container {
+  th {
+    border: none !important;
+  }
+}
+.Paper-Input {
+  box-shadow: none !important;
+}
+
+.completed-todo {
+  color: $gray-3 !important;
+}
