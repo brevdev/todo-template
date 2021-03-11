@@ -26,6 +26,13 @@ const ConfigSettings: React.FC = (props) => {
   const classes = useStyles();
 
   useEffect(() => {
+    let cached_url = localStorage.getItem("brev_url");
+    if (cached_url !== null) {
+      setBrevUrl(cached_url);
+    }
+  }, []);
+
+  useEffect(() => {
     const delayDebounceFn = setTimeout(() => {
       setContextUrl(brevUrl);
     }, 300);

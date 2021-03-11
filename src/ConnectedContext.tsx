@@ -39,11 +39,14 @@ const ConnectedContextProvider: React.FC = (props) => {
         console.log(response);
         if (response.status !== 404) {
           setIsBrevHookedUp(true);
+          localStorage.setItem("brev_url", brevUrl);
         } else {
           setIsBrevHookedUp(false);
+          localStorage.removeItem("brev_url");
         }
       } else {
         setIsBrevHookedUp(false);
+        localStorage.removeItem("brev_url");
       }
     };
     validateBrevURL();
