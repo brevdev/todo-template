@@ -38,12 +38,7 @@ function PaperInput(props: PaperInputProps) {
 
   return (
     <>
-      <Paper
-        component="form"
-        className={"Paper-Input"}
-        elevation={0}
-        style={{ width: "75%" }}
-      >
+      <Paper className={"Paper-Input"} elevation={0} style={{ width: "75%" }}>
         <InputBase
           className={classes.input}
           placeholder={props.placeholder}

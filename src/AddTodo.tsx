@@ -67,7 +67,12 @@ function AddTodo() {
         value={newToDo}
         onChange={setNewToDo}
       />
-      <Button variant={"outlined"} color={"secondary"} onClick={addToDo}>
+      <Button
+        type="submit"
+        variant={"outlined"}
+        color={"secondary"}
+        onClick={addToDo}
+      >
         {isAdding ? <CircularProgress /> : "submit"}
       </Button>
     </div>
