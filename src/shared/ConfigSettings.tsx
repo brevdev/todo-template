@@ -5,6 +5,7 @@ import { createStyles, makeStyles, Typography } from "@material-ui/core";
 import PaperInput from "../PaperInput";
 import { ConnectedContext } from "../ConnectedContext";
 import LaunchIcon from "@material-ui/icons/Launch";
+import useQueryParam from "../useQueryParams";
 
 const useStyles = makeStyles((theme) =>
   createStyles({
@@ -20,6 +21,7 @@ const useStyles = makeStyles((theme) =>
 
 const ConfigSettings: React.FC = (props) => {
   const [brevUrl, setBrevUrl] = useState("");
+  const [source] = useQueryParam("source", "");
   const { setBrevUrl: setContextUrl, isBrevHookedUp } = useContext(
     ConnectedContext
   );
@@ -32,6 +34,10 @@ const ConfigSettings: React.FC = (props) => {
       setBrevUrl(cached_url);
     }
   }, []);
+
+  useEffect(() => {
+    setBrevUrl(source);
+  }, [source]);
 
   useEffect(() => {
     const delayDebounceFn = setTimeout(() => {
