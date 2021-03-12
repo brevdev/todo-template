@@ -73,10 +73,6 @@
   position: relative;
   transition: 0.5s;
 }
-/* #forkongithub a:hover {
-  background: #c11;
-  color: #fff;
-} */
 #forkongithub a::before,
 #forkongithub a::after {
   content: "";

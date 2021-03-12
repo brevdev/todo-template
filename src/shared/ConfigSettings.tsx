@@ -4,6 +4,7 @@ import "../DarkModeLightMode.scss";
 import { createStyles, makeStyles, Typography } from "@material-ui/core";
 import PaperInput from "../PaperInput";
 import { ConnectedContext } from "../ConnectedContext";
+import LaunchIcon from "@material-ui/icons/Launch";
 
 const useStyles = makeStyles((theme) =>
   createStyles({
@@ -50,11 +51,26 @@ const ConfigSettings: React.FC = (props) => {
           ? "Connected to your Brev backend ✅ "
           : "1️⃣ Paste Your Brev URL Below"}
       </Typography>
+
       <PaperInput
         placeholder={"Your Backend URL"}
         value={brevUrl}
         onChange={setBrevUrl}
       />
+      {isBrevHookedUp && (
+        <Typography
+          variant="subtitle2"
+          className={classes.moduleHeader}
+          style={{
+            color: "#6ca7b2",
+            textDecoration: "underline",
+            cursor: "pointer",
+          }}
+          onClick={() => window.open("https://app.brev.dev", "_blank")}
+        >
+          <LaunchIcon style={{ verticalAlign: "middle" }} /> edit in console
+        </Typography>
+      )}
     </div>
   );
 };
