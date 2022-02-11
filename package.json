@@ -14,7 +14,7 @@
     "@types/react-dom": "^17.0.0",
     "axios": "^0.21.1",
     "lottie-react-web": "^2.2.2",
-    "node-sass": "^5.0.0",
+    "node-sass": "^7.0.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-scripts": "4.0.3",
